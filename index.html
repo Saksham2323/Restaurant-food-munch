@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/d1fbe4a968.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="mainPage">
+        <div id="sectionhomepage">
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+                <div class="container">
+                    <a class="navbar-brand" href="#">
+                        <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/food-munch-img.png" class="food-munch-logo" />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav ml-auto">
+                            <a class="nav-link active" id="navItem1" href="#wcuSection">
+                                Why Choose Us?
+                                <span class="sr-only">(current)</span>
+                            </a>
+                            <a class="nav-link" href="#exploreMenuSection" id="navItem2">Explore Menu</a>
+                            <a class="nav-link" href="#deliveryPaymentSection" id="navItem3">Delivery & Payment</a>
+                            <a class="nav-link" href="#followUsSection" id="navItem4">Follow Us</a>
+                            <a class="nav-link" href="#cartPage" onclick="toggleCart()" id="navItem5">Cart <i class="fa-solid fa-cart-shopping"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel" data-interval="3000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" style="background-image: url('https://raw.githubusercontent.com/codewithsadee/grilli/refs/heads/master/assets/images/hero-slider-1.jpg');">
+                    </div>
+                    <div class="carousel-item" style="background-image: url('https://raw.githubusercontent.com/codewithsadee/grilli/refs/heads/master/assets/images/hero-slider-2.jpg');">
+                    </div>
+                    <div class="carousel-item" style="background-image: url('https://raw.githubusercontent.com/codewithsadee/grilli/refs/heads/master/assets/images/hero-slider-3.jpg');">
+                    </div>
+                </div>
+
+                <!-- Updated Button Section -->
+                <div class="banner-section-bg-container d-flex justify-content-center flex-column">
+                    <div class="text-center">
+                        <h1 class="banner-heading mb-3">Get Delicious Food Anytime</h1>
+                        <p class="banner-caption mb-4">Eat Smart & Healthy</p>
+                        <button class="custom-button mb-3" onclick="document.getElementById('exploreMenuSection').scrollIntoView({ behavior: 'smooth' });">
+                            View Menu
+                        </button>
+                        <button class="custom-outline-button " onclick="document.getElementById('exploreMenuSection').scrollIntoView({ behavior: 'smooth' });">Order Now</button>
+                    </div>
+                </div>
+
+                <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <div class="wcu-section pt-5 pb-5" id="wcuSection">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1 class="wcu-section-heading">Why Choose Us?</h1>
+                            <p class="wcu-section-description">
+                                We use both original recipes and classic versions of famous food
+                                items.
+                            </p>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="wcu-card p-3 mb-3">
+                                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/food-serve.png" class="wcu-card-image" />
+                                <h1 class="wcu-card-title mt-3">Food Service</h1>
+                                <p class="wcu-card-description">
+                                    Experience fine dining at the comfort of your home. All our
+                                    orders are carefully packed and arranged to give you the nothing
+                                    less than perfect.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="wcu-card p-3 mb-3">
+                                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/fruits-img.png" class="wcu-card-image" />
+                                <h1 class="wcu-card-title mt-3">Fresh Food</h1>
+                                <p class="wcu-card-description">
+                                    The Fresh Food group provides fresh-cut fruits and vegetables
+                                    directly picked from our partner farms and farm houses so that
+                                    you always get them tree to plate.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4">
+                            <div class="wcu-card p-3 mb-3">
+                                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/offers-img.png" class="wcu-card-image" />
+                                <h1 class="wcu-card-title mt-3">Best Offers</h1>
+                                <p class="wcu-card-description">
+                                    Food Coupons & Offers upto
+                                    <span class="offers">50% OFF</span>
+                                    and Exclusive Promo Codes on All Online Food Orders.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="explore-menu-section pt-5 pb-5" id="exploreMenuSection">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1 class="menu-section-heading">Explore Menu</h1>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="shadow menu-item-card p-3 mb-3">
+                                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-ginger-fried-img.png" class="menu-item-image w-100" />
+                                <h1 class="menu-card-title">Non-Veg Starters</h1>
+                                <a href="#sectionnonvegmenu" class="menu-item-link" onclick="display('sectionnonvegmenu')">
+                                    View All
+                                    <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right-short" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="shadow menu-item-card p-3 mb-3">
+                                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-veg-starters-img.png" class="menu-item-image w-100" />
+                                <h1 class="menu-card-title">Veg Starters</h1>
+                                <a href="#sectionvegmenu" class="menu-item-link" onclick="display('sectionvegmenu')">
+                                    View All
+                                    <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="menu-item-card shadow p-3 mb-3">
+                                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-soup-img.png" class="menu-item-image w-100" />
+                                <h1 class="menu-card-title">Soups</h1>
+                                <a href="#sectionsoups" class="menu-item-link" onclick="display('sectionsoups')">
+                                    View All
+                                    <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="menu-item-card shadow p-3 mb-3">
+                                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-grilled-seafood-img.png" class="menu-item-image w-100" />
+                                <h1 class="menu-card-title">Fish & Sea food</h1>
+                                <a href="#sectionseafoodmenu" class="menu-item-link" onclick="display('sectionseafoodmenu')">
+                                    View All
+                                    <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="menu-item-card shadow p-3 mb-3">
+                                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-hyderabadi-biryani-img.png" class="menu-item-image w-100" />
+                                <h1 class="menu-card-title">Main Course</h1>
+                                <a href="#sectionmaincoursemenu" class="menu-item-link" onclick="display('sectionmaincoursemenu')">
+                                    View All
+                                    <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="menu-item-card shadow p-3 mb-3">
+                                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-mushroom-noodles-img.png" class="menu-item-image w-100" />
+                                <h1 class="menu-card-title">Noodles</h1>
+                                <a href="" class="menu-item-link">
+                                    View All
+                                    <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="menu-item-card shadow p-3 mb-3">
+                                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-gluten-img.png" class="menu-item-image w-100" />
+                                <h1 class="menu-card-title">Salads</h1>
+                                <a href="" class="menu-item-link">
+                                    View All
+                                    <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-3">
+                            <div class="menu-item-card shadow p-3 mb-3">
+                                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/em-coffee-bourbon-img.png" class="menu-item-image w-100" />
+                                <h1 class="menu-card-title">Desserts</h1>
+                                <a href="" class="menu-item-link">
+                                    View All
+                                    <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-arrow-right" fill="#d0b200" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="healthy-food-section pt-5 pb-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-5">
+                            <div class="text-center">
+                                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/healthy-food-plate-img.png" class="healthy-food-section-img" />
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-7">
+                            <h1 class="healthy-food-section-heading">
+                                Fresh, Healthy, Organic, Delicious Fruits
+                            </h1>
+                            <p class="healthy-food-section-description">
+                                Say no to harmful chemicals and go fully organic with our range of
+                                fresh fruits and veggies. Pamper your body and your senses with
+                                the true and unadulterated gifts from mother nature. with the true
+                                and unadulterated gifts from mother nature.
+                            </p>
+                            <button class="custom-button" onclick="window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ', '_blank');">Watch Video</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="delivery-and-payment-section pt-5 pb-5" id="deliveryPaymentSection">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-5 order-1 order-md-2">
+                            <div class="text-center">
+                                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/delivery-payment-section-img.png" class="delivery-and-payment-section-img" />
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-7 order-2 order-md-1">
+                            <h1 class="delivery-and-payment-section-heading">
+                                Delivery and Payment
+                            </h1>
+                            <p class="delivery-and-payment-section-description">
+                                Enjoy hassle-free payment with the plenitude of payment options
+                                available for you. Get live tracking and locate your food on a
+                                live map. It's quite a sight to see your food arrive to your door.
+                                Plus, you get a 5% discount on every order every time you pay
+                                online.
+                            </p>
+                            <button class="custom-button" onclick="document.getElementById('exploreMenuSection').scrollIntoView({ behavior: 'smooth' });">Order Now</button>
+                            <div class="mt-3">
+                                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/visa-card-img.png" class="payment-card-img" />
+                                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/master-card-img.png" class="payment-card-img" />
+                                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/paypal-card-img.png" class="payment-card-img" />
+                                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/american-express-img.png" class="payment-card-img" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="thanking-customers-section pt-5 pb-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 col-md-7 d-flex flex-column justify-content-center">
+                            <h1 class="thanking-customers-section-heading">
+                                Thank you for being a valuable customer to us.
+                            </h1>
+                            <p class="thanking-customers-section-description">
+                                We have a surprise gift for you
+                            </p>
+                            <div class="d-md-none">
+                                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/thanking-customers-section-img.png" class="thanking-customers-section-img" />
+                            </div>
+                            <div>
+                                <button type="button" class="custom-button" data-toggle="modal" data-target="#exampleModal">
+                                    Redeem Gift
+                                </button>
+                                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog mt-5">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title thanking-customers-section-modal-title" id="exampleModalLabel">
+                                                    Gift Voucher
+                                                </h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/gift-voucher-img.png" class="w-100" />
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                                                    Close
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-5 d-none d-md-block">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/thanking-customers-section-img.png" class="thanking-customers-section-img" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="follow-us-section pt-5 pb-5" id="followUsSection">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h1 class="follow-us-section-heading">Follow Us</h1>
+                        </div>
+                        <div class="col-12">
+                            <div class="d-flex flex-row justify-content-center">
+                                <div class="follow-us-icon-container">
+                                    <i class="fab fa-twitter icon"></i>
+                                </div>
+                                <div class="follow-us-icon-container">
+                                    <i class="fab fa-instagram icon"></i>
+                                </div>
+                                <div class="follow-us-icon-container">
+                                    <i class="fab fa-facebook icon"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-section pt-5 pb-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 text-center">
+                            <img src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-responsive-website/food-munch-logo-light.png" class="food-munch-logo" />
+                            <h1 class="footer-section-mail-id">orderfood@foodmunch.com</h1>
+                            <p class="footer-section-address">
+                                DSU, Bengaluru, K India.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="explore-menu-section pt-5 pb-5" id="sectionnonvegmenu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="menu-section-heading">Non-Veg Starters</h1>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://www.archanaskitchen.com/images/archanaskitchen/1-Author/Jyothi_Rajesh/4_main_Tandoori_Mayo_Chicken_Cigars_Recipe.jpg" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Tandoori Mayonnaise Chicken Cigar</h1>
+                            <p class="menu-item-desc">Succulent chicken marinated in a blend of tandoori spices and creamy mayonnaise, cooked to perfection. Warm spices, creamy, tangy.</p>
+                            <p class="menu-item-desc">₹500</p> <button class="btn custom-button">Add item</button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://www.archanaskitchen.com/images/archanaskitchen/1-Author/Nusrath_Jahan/Gola_kebabIndian_style_meat_balls.jpg" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Gola Kebab </h1>
+                            <p class="menu-item-desc">Tender, melt-in-your-mouth meatballs made with minced meat, spices, and onions. Grilled to perfection and served with chutney and naan bread..</p>
+                            <p class="menu-item-desc">₹450</p> <button class="btn custom-button">Add item</button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://www.archanaskitchen.com/images/archanaskitchen/1-Author/foodcoworg-gmail.com/Indian_Chicken_Keema_Sliders_1600.jpg" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Chicken Keema Sliders</h1>
+                            <p class="menu-item-desc">Flavorful ground chicken cooked with aromatic spices and herbs, nestled in soft slider buns. Topped with [your choice of toppings - e.g., tangy chutney, cool raita, crunchy onions]. A delicious twist on a classic!</p>
+                            <p class="menu-item-desc">₹450</p> <button class="btn custom-button">Add item</button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://www.archanaskitchen.com/images/archanaskitchen/1-Author/naseerawazir-gmail.com/Prawn_masala_balls.jpg" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Prawn Masala</h1>
+                            <p class="menu-item-desc">Succulent prawns cooked in a rich and flavorful masala sauce made with tomatoes, onions, and a blend of aromatic spices. A classic Indian dish with a kick!</p>
+                            <p class="menu-item-desc">₹450</p> <button class="btn custom-button">Add item</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="explore-menu-section pt-5 pb-5" id="sectionvegmenu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="menu-section-heading">Veg Starters</h1>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://www.spiceupthecurry.com/wp-content/uploads/2024/03/chipotle-queso-blanco-2.jpg" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Chipotle Queso Blanco</h1>
+                            <p class="menu-item-desc">Our creamy Queso Blanco is made with real, shredded Monterey Jack and white cheddar cheeses, and a touch of fire-roasted Poblano peppers for a subtly spicy kick. Perfect for dipping or drizzling!</p>
+                            <p class="menu-item-desc">₹500</p> <button class="btn custom-button">Add item</button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://www.spiceupthecurry.com/wp-content/uploads/2015/07/masala-papad-1.jpg" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Masala Papad</h1>
+                            <p class="menu-item-desc">Crispy papadums topped with a vibrant mix of finely chopped onions, tomatoes, cilantro, and a sprinkle of tangy spices. A burst of flavor in every bite!</p>
+                            <p class="menu-item-desc">₹450</p> <button class="btn custom-button">Add item</button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://www.spiceupthecurry.com/wp-content/uploads/2016/10/Samosa-recipe-1-1.jpg" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Punjabi Samosa</h1>
+                            <p class="menu-item-desc">Crispy, golden-fried pastry filled with a savory mix of spiced potatoes and peas. Served with tangy tamarind and vibrant mint chutneys. A classic Punjabi snack that's always a crowd-pleaser!</p>
+                            <p class="menu-item-desc">₹450</p> <button class="btn custom-button">Add item</button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://www.spiceupthecurry.com/wp-content/uploads/2013/12/khaman-dhokla-2.jpg" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Khaman Dhokla</h1>
+                            <p class="menu-item-desc">A light and fluffy steamed cake made from gram flour, tempered with mustard seeds and curry leaves. This Gujarati delicacy is a perfect balance of sweet and savory, served with green chutney.</p>
+                            <p class="menu-item-desc">₹450</p> <button class="btn custom-button">Add item</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="explore-menu-section pt-5 pb-5" id="sectionsoups">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="menu-section-heading">Soups</h1>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://media.delight.video/0c18e53b610964fac175fe0e757adc30557e79b7/aaebfad4a6fa515249059de3398013ffb360e614/POSTER_USER/v1/599b7c34-77f1-473f-95f4-c95a9f95b6d7.png?quality=90" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Leek & Potato Soup</h1>
+                            <p class="menu-item-desc">A classic comfort food! This creamy soup features tender leeks and potatoes simmered in a rich broth, finished with a touch of cream. Simple yet satisfying.</p>
+                            <p class="menu-item-desc">₹500</p> <button class="btn custom-button">Add item</button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://media.delight.video/0c18e53b610964fac175fe0e757adc30557e79b7/1b4544533f9a16d515e7059876f5a162df9ad7e1/POSTER_USER/v2/da0c8a4a-9f5d-449f-a0f6-fc8dbbb22aa9.png?quality=90" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Butternut squash Soup</h1>
+                            <p class="menu-item-desc">Velvety smooth and bursting with autumnal flavor. This soup features roasted butternut squash blended with aromatic vegetables and a hint of warming spices. Topped with [your choice of topping - e.g., toasted pumpkin seeds, a swirl of cream, crispy croutons]</p>
+                            <p class="menu-item-desc">₹450</p> <button class="btn custom-button">Add item</button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://media.delight.video/0c18e53b610964fac175fe0e757adc30557e79b7/251424c85cb62272c75c9912050f02efdf9391e4/POSTER_USER/v1/e7c2ea12-374a-4108-a268-fb85c53ab06d.jpg?quality=90" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Spiced carrot & lentil soup</h1>
+                            <p class="menu-item-desc">A vibrant and nourishing soup with sweet carrots, hearty lentils, and a fragrant blend of warming spices like ginger and cumin. This vegan delight is a delicious way to warm up on a chilly day.</p>
+                            <p class="menu-item-desc">₹450</p> <button class="btn custom-button">Add item</button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://images.immediate.co.uk/production/volatile/sites/30/2020/08/french-onion-soup-1e33029.jpg?quality=90&webp=true&resize=375,341" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">French onion soup</h1>
+                            <p class="menu-item-desc">A timeless classic. This rich and savory soup features sweet caramelized onions simmered in a flavorful beef broth, topped with a crusty crouton and melted Gruyère cheese. Pure comfort in a bowl.</p>
+                            <p class="menu-item-desc">₹450</p> <button class="btn custom-button">Add item</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="explore-menu-section pt-5 pb-5" id="sectionseafoodmenu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="menu-section-heading">Sea Food</h1>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://www.allrecipes.com/thmb/NGXxTmxr8ni2NupUnvvceF-GJ5U=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/ALR-8730066-copycat-red-lobster-shrimp-scampi-recipe-VAT-4x3-2lowerangle-2ea7c4b615f04459a0aea17fd28d9778.jpg" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Red Lobster Shrimp Scampi</h1>
+                            <p class="menu-item-desc">Tender shrimp sautéed in a garlic butter sauce with a hint of lemon and white wine. Served over a bed of linguine. A classic favorite!</p>
+                            <p class="menu-item-desc">₹500</p> <button class="btn custom-button">Add item</button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://www.allrecipes.com/thmb/bY90fVhFITJplYbynjp-iclBPhQ=/0x512/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/8727168_Seafood-Paella_Dotdash-Meredith-Food-Studios_4x3-061a6a5e3eb743bf95272854a2e4e62b.jpg" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Seafood Paella</h1>
+                            <p class="menu-item-desc">A taste of the Spanish coast! This vibrant paella is brimming with fresh seafood like [list specific seafood used - e.g., shrimp, mussels, clams, cod], saffron-infused rice, and colorful vegetables. A feast for the senses!</p>
+                            <p class="menu-item-desc">₹450</p> <button class="btn custom-button">Add item</button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://www.allrecipes.com/thmb/6HHd324azrylI7wwOmr-7vjNyCg=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/8699671_Grilled-Salmon-with-Chimichurri_TheDailyGourmet_4x3-fdc8ffa5cf1d49699ef5f02e8c62fc3e.jpg" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Grilled Salmon with Chimichurri</h1>
+                            <p class="menu-item-desc">Flaky, grilled salmon fillet topped with a vibrant and zesty chimichurri sauce. The herbaceous flavors of parsley, cilantro, and garlic perfectly complement the richness of the salmon.</p>
+                            <p class="menu-item-desc">₹450</p> <button class="btn custom-button">Add item</button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://www.allrecipes.com/thmb/pnvZSkFdx6XYTRWdpGnmfy1D0G0=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/8658669-Grilled-Tuna-Steaks-with-Wasabi-Blueberry-Sauce-GOLDMAN_ALR_Summer24_RedoForYou_R318737_4x3-113a9280ffbe45329e30f333bb9ce24d.jpg" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Grilled Tuna Steaks with Wasabi-Blueberry Sauce</h1>
+                            <p class="menu-item-desc">Seared tuna steaks, cooked to your liking, drizzled with an unexpected and delectable wasabi-blueberry sauce. The sweet and spicy notes of the sauce perfectly complement the richness of the tuna.</p>
+                            <p class="menu-item-desc">₹450</p> <button class="btn custom-button">Add item</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="explore-menu-section pt-5 pb-5" id="sectionmaincoursemenu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h1 class="menu-section-heading">Main Course</h1>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://www.southernliving.com/thmb/IDawD8TLqqUxaEr6FIwQNlC5ouo=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Fettuccine_Alfredo_006-aa0899e03f394690885e85a3ec4ea3d0.jpg" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Fettuccine Alfredo</h1>
+                            <p class="menu-item-desc">A classic Italian indulgence! Fresh fettuccine pasta coated in a rich and creamy sauce made with butter, Parmesan cheese, and a touch of cream. Simple, yet decadent.</p>
+                            <p class="menu-item-desc">₹500</p> <button class="btn custom-button">Add item</button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="shadow menu-item-card p-3 mb-3">
+                            <img src="https://www.southernliving.com/thmb/H2A92yF9adt5ehQCooGy6teoV40=/750x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/27697_SupT_Ham_015-d667cb3bb03f4aecbd7d239de670f8ad.jpg" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Ham Carbonara With Peas</h1>
+                            <p class="menu-item-desc">A twist on the Italian classic! This creamy carbonara features salty ham, sweet peas, and perfectly cooked fettuccine, all coated in a rich sauce made with eggs, Parmesan cheese, and a touch of cream.</p>
+                            <p class="menu-item-desc">₹450</p> <button class="btn custom-button">Add item</button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://www.allrecipes.com/thmb/SoVDRt1t5xo1x0BZQZozMbOXnDY=/0x512/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/RM_16102_ChickenBiryani_ddmfs_3x4_5315-236dfbbc7965498cac20b87797841b69.jpg" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Chicken Biryani</h1>
+                            <p class="menu-item-desc">Aromatic basmati rice layered with tender marinated chicken, fragrant spices like saffron and cardamom, and caramelized onions. This classic Indian dish is a symphony of flavors and textures.</p>
+                            <p class="menu-item-desc">₹450</p> <button class="btn custom-button">Add item</button>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-3">
+                        <div class="menu-item-card shadow p-3 mb-3">
+                            <img src="https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fimages.media-allrecipes.com%2Fuserphotos%2F876623.jpg&q=60&c=sc&poi=auto&orient=true&h=512" class="menu-item-image w-100" />
+                            <h1 class="menu-card-title">Lamb (Gosht) Biryani</h1>
+                            <p class="menu-item-desc">Aromatic basmati rice layered with tender marinated lamb, fragrant spices like saffron and cardamom, and caramelized onions. This rich and flavorful dish is a true celebration of Mughal cuisine..</p>
+                            <p class="menu-item-desc">₹450</p> <button class="btn custom-button">Add item</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <button id="cartIcon" onclick="toggleCart()">
+                <i class="fas fa-shopping-cart"></i> Cart
+                <span id="cartItemCount" class="badge badge-pill badge-light">0</span>
+            </button>
+        </div>
+    </div>
+    <div id="cartPage" style="display: none;">
+        <div class="container">
+            <h1>Your Cart</h1>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Item</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <div class="row">
+                <div class="col-md-8"></div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <p>Subtotal: <span id="subtotal">₹0</span></p>
+                            <p>Delivery Charges: <span id="deliveryCharges">₹50</span></p>
+                            <hr>
+                            <p>Total: <span id="total">₹50</span></p>
+                            <button class="btn custom-button" style="height:60px">Proceed to Checkout</button>
+                            <button class="btn custom-button" style="height:60px" onclick="toggleCart()">Return to Home</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://d1tgh8fmlzexmh.cloudfront.net/ccbp-static-website/js/ccbp-ui-kit.js"></script>
+</body>
+
+</html>
